@@ -1,0 +1,106 @@
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+button img {
+    width: 100%;
+}
+
+/*menu bar*/
+#menubar {
+}
+/*left side*/
+#leftSide {
+    background-color: slategray;
+    position: fixed;
+    left: 0px;
+    width: 80px;
+    height: 90vh;
+}
+
+/*canvas*/
+#mainView {
+    overflow: scroll;
+    position: absolute;
+    left: 130px;
+    right: 260px;
+    height: 90vh;
+    /*background-color: silver;*/
+}
+
+#rightSide {
+    overflow-y: scroll;
+    position: fixed;
+    right: 0px;
+    width: 250px;
+    height: 90vh;
+    background-color: slategray;
+}
+#footer {
+    height: 10vh;
+    background-color: papayawhip;
+    position: relative;
+    width: 100%;
+    top: 80vh
+}
+.no-padding {
+    padding: 1px 1px 1px 1px;
+}
+
+input[type="number"] {
+    width: 44px;
+    height: 23px;
+}
+/*mark current tool layer*/
+.currentLayers {
+    background-color: palevioletred;
+}
+
+
+/*menu right click*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.context-menu {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  padding: 12px 0;
+  width: 100px;
+  background-color: #fff;
+  border: solid 1px #dfdfdf;
+  box-shadow: 1px 1px 2px #cfcfcf;
+}
+.context-menu__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.context-menu__item {
+  display: block;
+  margin-bottom: 4px;
+}
+.context-menu__item:last-child {
+  margin-bottom: 0;
+}
+
+.context-menu__link {
+  display: block;
+  padding: 4px 12px;
+  color: #0066aa;
+  text-decoration: none;
+}
+
+.context-menu__link:hover {
+  color: #fff;
+  background-color: #0066aa;
+}
+.context-menu--active {
+  display: block;
+}
+

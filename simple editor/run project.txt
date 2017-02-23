@@ -1,0 +1,15 @@
+setup environment:
+- install nodejs if have not in your system.
+// install jquery library
+$ npm install jquery
+// install bootstrap library
+$ install bootstrap
+
+// install angular2
+$ npm install
+
+// start project
+
+$ npm start
+
+- done

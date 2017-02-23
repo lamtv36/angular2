@@ -1,0 +1,36 @@
+<div class="panel panel-primary">
+        <div class="panel-heading" data-toggle="collapse" data-target="#panel-style">Styles</div>
+        <div id="panel-style" class="panel-body" style="padding: 1px 1px 1px 1px;">
+            <div class="container-fluid" style="height: 150px; overflow-y: scroll;">
+                <div id="fillcolor" class="checkbox">
+                    <label class="checkbox-inline"><input (click)="hasFillColor()" type="checkbox" value="" >Fill Color: </label>
+                    <input type="color" value="#333333" style="float: right" disabled>
+                </div>
+                <div id="strokecolor" class="checkbox">
+                    <label class="checkbox-inline"><input type="checkbox" value="" checked>Stroke Color: </label>
+                    <input type="color" value="#333333" style="float: right">
+                </div>
+                <div id="textcolor" class="checkbox">
+                    <label class="checkbox-inline"><input type="checkbox" value="" checked>Text Color: </label>
+                    <input type="color" value="#333333" style="float: right">
+                </div>
+                <div id="linewidth" class="checkbox">
+                    <label class="checkbox-inline"><input type="checkbox" value="" checked>Line Width: </label>
+                    <input type="number" value="1" min='0' style="float: right">
+                </div>
+                <div id="fontsize" class="checkbox">
+                    <label class="checkbox-inline"><input type="checkbox" value="" checked>Font Size: </label>
+                    <input type="number" value="14" min='0' style="float: right">
+                </div>
+                <div id="fontfamily" class="checkbox">
+                    <label class="checkbox-inline"><input type="checkbox" value="" checked>Font Family: </label>
+                    <form action="" style="float: right;">
+                        <select >
+                            <option *ngFor = "let font of listFonts" value={{font.fontFamily}}>{{font.fontFamily}}</option>
+                        </select>
+                    </form>
+
+                </div>
+            </div><!--/container content style panel-->
+        </div> <!--/content panel body of style -->
+    </div><!--/styles panel -->

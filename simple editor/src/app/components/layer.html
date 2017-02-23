@@ -1,0 +1,26 @@
+ <div class="panel panel-primary">
+        <div class="panel-heading" data-toggle="collapse" data-target="#layer-content">Layers</div>
+            <div id="layer-content" class="panel-body" style="padding: 1px 1px 1px 1px;">
+                <div style="height: 200px; overflow-y: scroll;">
+                    <table class="table table-condensed table-bordered">
+                        <tbody>
+                            <tr *ngFor = "let layerItem of layers" [class.selected]="layerItem === currentLayer">
+                                <td style='width: 10px'><input type='checkbox' (click)="showLayer(layerItem)" value='' checked></td>
+                                <td><div contentEditable=false (click)="selectedLayer(layerItem)">{{layerItem.name}}</div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> <!--/content layer-->
+            <div class="btn-group btn-group-justified">
+                <div class="btn-group">
+                    <button (click)="addLayer()" type="button" class="btn btn-primary">add</button>
+                </div>
+                <div class="btn-group">
+                    <button (click)="mergeLayer()" type="button" class="btn btn-primary">merge</button>
+                </div>
+                <div class="btn-group">
+                    <button (click)="deleteCurrentLayer()" type="button" class="btn btn-primary">delete</button>
+                </div>
+            </div> <!--/group button control -->
+        </div><!--/panel body-->
+    </div><!--/layer panel -->
